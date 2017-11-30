@@ -22,4 +22,8 @@ comment_app.controller('CommentController', function($scope, commentObj) {
   $scope.addLikes = function(index) {
     $scope.comments[index].likes++;
   };
+
+  $scope.deleteComments = function(index) {
+    $scope.comments = [...$scope.comments.slice(0,index), ...$scope.comments.slice(index+1)];
+  };
 });

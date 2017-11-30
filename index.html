@@ -11,6 +11,7 @@
           {{comment.text}}
           <div>Likes: {{comment.likes}}</div>
           <button data-ng-click="addLikes($index)">Add Likes</button>
+          <button data-ng-click="deleteComments($index)">Delete Comment</button>
         </li>
       </ul>
       <input type="text" data-ng-model="newText"/>
