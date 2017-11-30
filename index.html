@@ -7,7 +7,11 @@
     <section data-ng-controller="CommentController">
       <p>Free feel to add comments below!</p>
       <ul>
-        <li data-ng-repeat="comment in comments">{{comment.text}}</li>
+        <li ngModel="index=$index" data-ng-repeat="comment in comments">
+          {{comment.text}}
+          <div>Likes: {{comment.likes}}</div>
+          <button data-ng-click="addLikes($index)">Add Likes</button>
+        </li>
       </ul>
       <input type="text" data-ng-model="newText"/>
       <button data-ng-click="addComments()">Add a comment</button>

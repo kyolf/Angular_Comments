@@ -12,4 +12,8 @@ comment_app.controller('CommentController', function($scope) {
     });
     $scope.newText = '';
   };
+
+  $scope.addLikes = function(index) {
+    $scope.comments[index].likes++;
+  };
 });
